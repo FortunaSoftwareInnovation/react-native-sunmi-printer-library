@@ -372,9 +372,9 @@ class SunmiPrinterLibraryModule(reactContext: ReactApplicationContext) :
       val callback = makeInnerResultCallback(promise, "native#printColumnsText is failed.")
 
       var _texts = arrayOf<String>()
-      for (i in 0..(texts.size()-1)){
-        _texts += texts.getString(i)
-      }
+      // for (i in 0..(texts.size()-1)){
+      //   _texts += texts.getString(i)
+      // }
 
       var _widths = intArrayOf()
       for (i in 0..(widths.size()-1)){
@@ -382,12 +382,12 @@ class SunmiPrinterLibraryModule(reactContext: ReactApplicationContext) :
       }
 
       var _alignments = intArrayOf()
-      for (i in 0..(alignments.size()-1)){
-        val temp = alignmentToInt(alignments.getString(i))
-        if(temp != null){
-          _alignments += temp
-        }
-      }
+      // for (i in 0..(alignments.size()-1)){
+      //   val temp = alignmentToInt(alignments.getString(i))
+      //   if(temp != null){
+      //     _alignments += temp
+      //   }
+      // }
 
       if (_texts.size == _alignments.size && _texts.size == _widths.size) {
          printerService?.printColumnsText(_texts, _widths, _alignments, callback)
@@ -406,9 +406,9 @@ class SunmiPrinterLibraryModule(reactContext: ReactApplicationContext) :
       val callback = makeInnerResultCallback(promise, "native#printColumnsString is failed.")
 
       var _texts = arrayOf<String>()
-      for (i in 0..(texts.size()-1)){
-        _texts += texts.getString(i)
-      }
+      // for (i in 0..(texts.size()-1)){
+      //   _texts += texts.getString(i)
+      // }
 
       var _widths = intArrayOf()
       for (i in 0..(widths.size()-1)){
@@ -416,12 +416,12 @@ class SunmiPrinterLibraryModule(reactContext: ReactApplicationContext) :
       }
 
       var _alignments = intArrayOf()
-      for (i in 0..(alignments.size()-1)){
-        val temp = alignmentToInt(alignments.getString(i))
-        if(temp != null){
-          _alignments += temp
-        }
-      }
+      // for (i in 0..(alignments.size()-1)){
+      //   val temp = alignmentToInt(alignments.getString(i))
+      //   if(temp != null){
+      //     _alignments += temp
+      //   }
+      // }
 
       if (_texts.size == _alignments.size && _texts.size == _widths.size) {
          printerService?.printColumnsString(_texts, _widths, _alignments, callback)
